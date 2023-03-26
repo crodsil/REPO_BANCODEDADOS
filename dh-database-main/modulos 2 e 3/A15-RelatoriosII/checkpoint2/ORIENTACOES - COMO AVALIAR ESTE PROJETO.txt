@@ -1,0 +1,22 @@
+EXECUTE OS ARQUIVOS NA SEGUINTE ORDEM:
+
+1º CRIAÇÃO DO BANDO DE DADOS
+
+	- Execute o arquivo bd_cesta_coletiva.sql ou dump_cesta.sql
+		Obs.: FKs dependentes foram colocadas no final no arquivo bd_cesta_coletiva.sql 
+
+2º MANIPULANDO DADOS:
+
+	● Criação das tabelas com chaves primárias e estrangeiras.
+	● Inserção de dados em uma das tabelas.
+	● Atualização de dados em uma das tabelas.
+	● Exclusão de dados em uma das tabelas.
+	● Seleção de dados de uma das tabelas.
+
+	- Execute o arquivo queries_cesta.sql ou queries_cesta.txt
+	- Obs: Observar comentários pois há testes adicionais
+
+3º ATUALIZAÇÃO DO MER
+
+	- O MER do projeto foi atualizado e está anexo como mer_cesta_coletiva.draw.io
+	- Fiz isso conforme solicitado pelo Prof. Felipe em aula

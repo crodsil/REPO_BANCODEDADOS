@@ -1,0 +1,50 @@
+/*
+PROCEDURES = RESULTADOS RETORNADOS PODEM SER MANIPULAROD (OPERADOS) -> FUNÇÕES DE AGREGAÇÃO, FORMATAÇÃO DE SAÍDA, ETC
+VIEWS = SÓ VIZUALIZAMOS RESULTADOS
+*/
+
+USE musimundos_V2;
+
+SELECT * FROM clientes;
+
+/*TENTATIVA DE CRIAÇÃO ABAIXO - MELHOR */
+
+DELIMITER $$
+CREATE PROCEDURE nomeUsuario(nome)
+BEGIN
+SELECT nome FROM clientes;
+END
+DELIMITER $$;
+
+/*CRIANDO NA AULA*/
+
+DELIMITER $$
+CREATE PROCEDURE `todosClientes` ()
+BEGIN
+SELECT * FROM `clientes`;
+END $$
+
+CALL `todosClientes`;
+
+DROP PROCEDURE todosClientes;
+
+DELIMITER $$
+CREATE PROCEDURE `nomeUsuario` (IN id_usuario INT)
+BEGIN
+SELECT nome FROM `clientes` WHERE id = id_usuario;
+END $$
+
+SELECT * FROM clientes;
+
+CALL nomeUsuario(1);
+
+/*AULA*/
+
+/*CALL PROCEDURE CRIADA*/
+
+CALL dados_Usuario();
+CALL dados_Usuario('Luís');
+
+/*MOSTRAR AS PROCEDURES DE UM BD*/
+
+SHOW PROCEDURE STATUS;
